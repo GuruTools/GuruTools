@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", system-ui;
+}
+/* Navbar Styling */
+.navbar {
+    padding: 10px 20px;
+}
+
+.navigation-system {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    border-bottom: 3px solid;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        width: 100%;
+        border: 1px solid #cccc;
+        z-index: 9999;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+.abt h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: darkslategray;
+    text-align: start;
+}
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 52px;
+    font-size: 21px;
+    text-align: left;
+}
+
+.hero-section img {
+    height: 37pc; /* Retaining your original height */
+    object-fit: cover; /* Ensure image fits well within the container */
+    border-radius: 15px; /* Slightly rounded corners for a modern look */
+}
+
+.hero-section p {
+    padding: 12px 0;
+    line-height: 1.6; /* Improve readability */
+}
+
+.hero-section button {
+    padding: 12px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 12px;
+    font-size: 18px; /* Slightly larger text for better UX */
+}
+
+.hero-section button:hover {
+    background-color: #005f7a; /* Darker shade on hover */
+}
+
+a {
+    color: white;
+    text-decoration: none; /* Remove underline for links */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 886px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        font-size: 16px;
+        padding: 35px 20px; 
+        width: 100%; 
+        align-items: center; 
+    }
+
+    .hero-section img {
+        display: none; 
+    }
+
+    .workkk {
+        text-align: left; 
+        padding: 0 20px; 
+    }
+    .abt h1 {
+        font-size: 39px;
+        text-align: center;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 10px; /* Further adjust padding for smaller devices */
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .hero-section button {
+        padding: 10px 18px; /* Reduce button padding on small screens */
+        font-size: 16px;
+    }
+    .hero-section p {
+        padding: 12px 0;
+        line-height: 1.6;
+        font-size: 18px;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center align the section */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .name h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .work p {
+    color: #0077b6;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .workkk {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .workkk p {
+    margin-bottom: 20px;
+  }
+  
+  strong {
+    color: #0077b6; /* Highlight important info */
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .name h2 {
+      font-size: 33px;
+    }
+  
+    .work p {
+      font-size: 20px;
+    }
+  
+    .workkk {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .name h2 {
+      font-size: 24px;
+    }
+  
+    .work p {
+      font-size: 22px;
+    }
+  
+    .workkk {
+      font-size: 15px;
+    }
+  }
+  
+/* Animation for elements when they are visible */
+.section-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .section-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #loading {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensures it is on top of other elements */
+    font-size: 24px;
+}
+
+/* Spinner animation */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.hero-res {
+    display: none;
+}
+
+@media (max-width: 886px) {
+    .hero-res {
+        display: block;
+    }
+    .hero-res img{
+        display: block;
+        height: 384px;
+    }
+    .hero {
+        display: none;
+    }
+}
+
+.downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.downloads a {
+    color: #ffffff; /* Consistent use of white text */
+    font-size: 18px;
+    text-decoration: none; /* Use none instead of solid to avoid confusion */
+    background-color: #007a91; /* Slightly adjusted for a more modern feel */
+    padding: 12px 20px; /* More padding for better touch target size */
+    border-radius: 30px; /* Softer corner radius */
+    margin: 20px 0; /* Reduced margin for a tighter layout */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth with a subtle shadow */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+.downloads a:hover {
+    background-color: #006b83; /* Darker color on hover for better interaction feedback */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.downloads p {
+    font-size: 22px;
+    color: #333; /* More readable dark gray color */
+    text-align: center; /* Centers the text for better alignment with the links */
+    margin-bottom: 15px; /* Adds some spacing before the links */
+}
+.why {
+    padding: 55px 38px;
+    display: flex;
+    flex-direction: column;
+}
+.why h1 {
+    font-size: 50px;
+}
+p {
+    padding: 13px 0;
+    line-height: 36px;
+    font-size: 18px;
+}
+p.bold {
+    font-weight: 600;
+}
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0073e6;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item h3::before {
+    content: "Q: ";
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.faq-item p::before {
+    content: "A: ";
+    font-weight: bold;
+    color: #4caf50;
+}
+
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-item p {
+        font-size: 0.95rem;
+    }
+}
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px); /* Blurry glass effect */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5); /* Frosted look */
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
